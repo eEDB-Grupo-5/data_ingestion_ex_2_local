@@ -84,15 +84,13 @@ services:
       - local-network
 
   s3-setup:
-    image: amazon/aws-cli:latest # Use the official AWS CLI image
+    image: amazon/aws-cli:latest
     container_name: s3-setup
     depends_on:
       localstack:
-        condition: service_started # Wait for LocalStack to start
+        condition: service_started
     volumes:
-      # Mount our local raw data folder to a path inside the container
       - ./data:/data/raw-data 
-      # Mount the script to a path inside the container
       - ./scripts/setup_s3.sh:/app/setup_s3.sh
     entrypoint: /bin/bash
     command: /app/setup_s3.sh
