@@ -1,0 +1,6 @@
+polars[fsspec,pyarrow,aws,s3fs,s3]
+psycopg2-binary
+s3fs
+fsspec
+pandas
+jupyterlab

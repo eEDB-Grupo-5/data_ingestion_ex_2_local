@@ -1,0 +1,13 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "Local ETL Database",
+            "Group": "Development Servers",
+            "Host": "postgres",
+            "Port": 5432,
+            "MaintenanceDB": "maindb",
+            "Username": "postgresadmin",
+            "SSLMode": "prefer"
+        }
+    }
+}
